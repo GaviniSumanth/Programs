@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 
 function Display(props) {
-  console.log("Props:", props);
   return (
     <Dialog
       open={props.state}
@@ -12,7 +11,7 @@ function Display(props) {
       <Dialog.Panel>
         <Dialog.Title className="dialog-title">Analysis Result</Dialog.Title>
         <Dialog.Description className="dialog-description">
-          {props.data.result.gender}
+          {props.data.result}
         </Dialog.Description>
         <button className="button" onClick={() => props.setState(false)}>
           Ok

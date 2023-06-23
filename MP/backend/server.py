@@ -8,15 +8,31 @@ def Server():
     # cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
     CORS(app)
 
-    @app.route("/model/", methods=["POST"])
+    @app.route("/result/", methods=["POST"])
     @cross_origin()
-    def steam():
+    def result():
         data = request.data
-        return jsonify({"result": data})
+        print(data)
+        return jsonify({"result": "data"})
 
-    @app.route("/info/", methods=["GET"])
+    @app.route("/form/", methods=["GET"])
     @cross_origin()
-    def steams():
-        return jsonify({"result": "Success"})
+    def form():
+        # args = request.args
+        return jsonify(
+            [
+                {
+                    "identifier": "username",
+                    "label": "Enter Name:",
+                    "type": "text",
+                },
+                {
+                    "identifier": "gender",
+                    "label": "Select Gender:",
+                    "type": "select",
+                    "options": ["Male", "Female", "Other"],
+                },
+            ]
+        )
 
     app.run()
