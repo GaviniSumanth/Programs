@@ -116,8 +116,8 @@ class ModelInfo:
             cursor = conn.cursor()
             rows = cursor.execute(get_info_query, data).fetchall()
         except sqlite3.Error as error:
-            print("Exception:", e)
-            raise e
+            print("Exception:", error)
+            raise error
         data = []
         for i in rows:
             data.append({"name": i["name"], "description": i["description"]})

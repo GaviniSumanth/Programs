@@ -18,6 +18,7 @@ function Text(props) {
   return (
     <div className="field">
       <label htmlFor={props.identifier}>{props.label}</label>
+      <br />
       <input
         type="text"
         name={props.identifier}
@@ -31,6 +32,7 @@ function Select(props) {
   return (
     <div className="field">
       <label htmlFor={props.identifier}>{props.label}</label>
+      <br />
       <select name={props.identifier}>
         {props.options.map((value) => (
           <option key={value} value={value}>
@@ -38,6 +40,19 @@ function Select(props) {
           </option>
         ))}
       </select>
+    </div>
+  );
+}
+function Radio(props) {
+  return (
+    <div className="field">
+      <label htmlFor={props.identifier}>{props.label}</label>
+      {props.options.map((value) => (
+        <label key={value}>
+          <input type="radio" name={value} value={value} />{" "}
+          {!(value % 2) ? <br /> : null}
+        </label>
+      ))}
     </div>
   );
 }
@@ -96,6 +111,15 @@ export default function Form() {
           } else if (e.type === "select") {
             return (
               <Select
+                identifier={e.identifier}
+                label={e.label}
+                key={e.label}
+                options={e.options}
+              />
+            );
+          } else if (e.type === "radio") {
+            return (
+              <Radio
                 identifier={e.identifier}
                 label={e.label}
                 key={e.label}

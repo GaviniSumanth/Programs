@@ -8,17 +8,18 @@ def Server():
     # cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
     CORS(app)
 
-    @app.route("/result/", methods=["POST"])
+    @app.route("/result", methods=["POST"])
     @cross_origin()
     def result():
         data = request.data
         print(data)
         return jsonify({"result": "data"})
 
-    @app.route("/form/", methods=["GET"])
+    @app.route("/form", methods=["GET"])
     @cross_origin()
     def form():
-        # args = request.args
+        args = request.args
+        print(args)
         return jsonify(
             [
                 {
