@@ -28,6 +28,21 @@ function Text(props) {
     </div>
   );
 }
+function Number(props) {
+  return (
+    <div className="field">
+      <label htmlFor={props.identifier}>{props.label}</label>
+      <br />
+      <input
+        type="number"
+        name={props.identifier}
+        min={props.min}
+        max={props.max}
+        required
+      />
+    </div>
+  );
+}
 function Select(props) {
   return (
     <div className="field">
@@ -47,9 +62,11 @@ function Radio(props) {
   return (
     <div className="field">
       <label htmlFor={props.identifier}>{props.label}</label>
+      <br />
       {props.options.map((value) => (
         <label key={value}>
-          <input type="radio" name={value} value={value} />{" "}
+          <input type="radio" name={props.identifier} value={value} />
+          {value}
           {!(value % 2) ? <br /> : null}
         </label>
       ))}
@@ -62,7 +79,9 @@ export default function Form() {
   let [form, setForm] = useState(false);
   const submitForm = (e) => {
     const formData = new FormData(e.target);
-    var data = {};
+    var data = {
+      form: new URLSearchParams(window.location.search).get("form"),
+    };
     formData.forEach((value, key) => (data[key] = value));
     URL = urls.SUBMIT;
     console.log(JSON.stringify(data));
@@ -80,7 +99,9 @@ export default function Form() {
         setIsOpen(true);
       });
   };
-  URL = urls.FORM();
+  URL = urls.FORM({
+    form: new URLSearchParams(window.location.search).get("form"),
+  });
   fetch(URL, {
     method: "GET",
     headers: {
@@ -124,6 +145,16 @@ export default function Form() {
                 label={e.label}
                 key={e.label}
                 options={e.options}
+              />
+            );
+          } else if (e.type === "number") {
+            return (
+              <Number
+                identifier={e.identifier}
+                label={e.label} 
+                key={e.label}
+                min={e.min}
+                max={e.max}
               />
             );
           }

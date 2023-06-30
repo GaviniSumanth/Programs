@@ -85,16 +85,7 @@
   color: var(--sub-title);
   font-size: larger;
 }
-input {
-  background-color: var(--card-background);
-  color: var(--card-text);
-  font-size: large;
-  border-radius: 5px;
-  border: none;
-  width: 300px;
-  padding: 3px;
-  outline: none;
-}
+.field{}
 #Submit {
   margin-top: 15px;
 }
