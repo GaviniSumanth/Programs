@@ -8,7 +8,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     gap: 10,
-    maxWidth: "500px",
+    maxWidth: "700px",
     margin: "0 auto",
     backgroundColor: "black",
     padding: "20px 30px",
@@ -151,7 +151,7 @@ export default function Form() {
             return (
               <Number
                 identifier={e.identifier}
-                label={e.label} 
+                label={e.label}
                 key={e.label}
                 min={e.min}
                 max={e.max}

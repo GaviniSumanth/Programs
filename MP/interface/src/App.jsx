@@ -23,12 +23,12 @@ function App() {
             <Card
               src="https://images.unsplash.com/photo-1684151941972-2d456c0e2b3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dolorem optio iure voluptate dolore culpa iste, suscipit provident adipisci, tempora reprehenderit voluptas dolor in facilis quaerat illo animi deleniti eveniet.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dolorem optio iure voluptate dolore culpa iste, suscipit provident adipisci, tempora reprehenderit voluptas dolor in facilis quaerat illo animi deleniti eveniet.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dolorem optio iure voluptate dolore culpa iste, suscipit provident adipisci, tempora reprehenderit voluptas dolor in facilis quaerat illo animi deleniti eveniet."
-              url="https://www.google.com"
+              url="Form?form=HRDataset"
             />
             <Card
               src="https://images.unsplash.com/photo-1684151941972-2d456c0e2b3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dolorem optio iure voluptate dolore culpa iste, suscipit provident adipisci, tempora reprehenderit voluptas dolor in facilis quaerat illo animi deleniti eveniet.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dolorem optio iure voluptate dolore culpa iste, suscipit provident adipisci, tempora reprehenderit voluptas dolor in facilis quaerat illo animi deleniti eveniet.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dolorem optio iure voluptate dolore culpa iste, suscipit provident adipisci, tempora reprehenderit voluptas dolor in facilis quaerat illo animi deleniti eveniet."
-              url="https://www.google.com"
+              url="Form?form=steam_sales_prediction"
             />
           </Tab.Panel>
         </Tab.Panels>
