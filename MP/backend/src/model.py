@@ -110,7 +110,7 @@ class ModelWrapper:
             ],
         )
 
-        return self.model.predict(arg)
+        return "Estimated Sales:" + str(round(self.model.predict(arg)[0], 2))
 
 
 sample_dict = {
