@@ -1,7 +1,7 @@
 import sqlite3
 import warnings
 import os
-import pickle
+import dill as pickle
 from datetime import datetime
 import json
 
@@ -137,3 +137,8 @@ class ModelInfo:
             print("RETRIEVAL_FAILED:", error)
         if row:
             return row["input_fields"]
+
+
+class ModelWrapper:
+    def predict(args):
+        pass
